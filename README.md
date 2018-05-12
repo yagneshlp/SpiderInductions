@@ -23,7 +23,7 @@ This is an All-in-one which will host Tasks of each round during Spider AppDev I
    -- Easy to Use GUI
 
 
-Available on Play Store at [HERE](http://play.google.com/) 
+Available on Play Store. Click [HERE](http://play.google.com/) 
 
 
 
