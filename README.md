@@ -1,6 +1,6 @@
 # SpiderInductions
 
-This is an All-in-one which will host Tasks of each round during Spider AppDev Inductions
+This is an All-in-one app which will host Tasks of each round during Spider AppDev Inductions
 
 
 # SubModules

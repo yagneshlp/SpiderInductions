@@ -16,7 +16,7 @@ import java.util.Random;
 import in.shadowfax.proswipebutton.ProSwipeButton;
 
 public class Task0Activity extends Activity {
-    int curamt,random,prev;
+    int curamt,random,prev=0;
     TextView tv_raand,tv_cur;
     Button rs1,rs2,rs5,rs10,undo,reset;
     ProSwipeButton proSwipeBtn;
@@ -77,9 +77,10 @@ public class Task0Activity extends Activity {
         undo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!(prev==0)){
                 curamt = curamt - prev;
                 undo.setEnabled(false);
-                checkStatus();
+                checkStatus();}
             }
         });
 
@@ -143,6 +144,7 @@ public class Task0Activity extends Activity {
         rs10.setEnabled(true);
         undo.setEnabled(true);
         curamt = 0;
+        prev = 0;
         tv_cur.setText("");
         fl.setBackgroundColor(getResources().getColor(R.color.background));
     }
