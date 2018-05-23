@@ -26,6 +26,31 @@
             android:textColor="@color/colorAccent"/>
 
     </com.adammcneilly.ActionCardView>
+    <com.adammcneilly.ActionCardView
+        android:id="@+id/action_cardTask1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/action_card"
+        app:cardCornerRadius="8dp"
+        app:cardTitle="Task 1"
+        app:cardDescription="The Rubik’s cube timer">
+
+        <com.adammcneilly.ActionButton
+            android:id="@+id/button_task1Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Mode"
+            android:textColor="@color/colorAccent"/>
+
+        <com.adammcneilly.ActionButton
+            android:id="@+id/button_task1Hacker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hacker Mode"
+            android:textColor="@color/colorAccent"/>
+
+    </com.adammcneilly.ActionCardView>
 
 
     <me.grantland.widget.AutofitTextView

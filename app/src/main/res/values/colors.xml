@@ -6,4 +6,6 @@
     <color name="background">#414141</color>
     <color name="green_success">#01c14f</color>
     <color name="red_failure">#ef481f</color>
+    <color name="white">#fff</color>
+    <color name="hackerMode">#f98b2a</color>
 </resources>
