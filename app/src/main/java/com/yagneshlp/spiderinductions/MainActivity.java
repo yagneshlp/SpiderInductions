@@ -25,9 +25,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionCardView actionCardView0,actionCardView1;
+        ActionCardView actionCardView0,actionCardView1,actionCardView2;
         actionCardView0 = (ActionCardView) findViewById(R.id.action_card);
         actionCardView1 = (ActionCardView) findViewById(R.id.action_cardTask1);
+        actionCardView2 = (ActionCardView) findViewById(R.id.action_cardTask2) ;
 
         actionCardView0.addActionClickListener(R.id.button_task0, new View.OnClickListener() {
             @Override
@@ -57,6 +58,28 @@ public class MainActivity extends Activity {
 
             }
         });
+
+        actionCardView2.addActionClickListener(R.id.button_task2Normal, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Task2Activity.class);
+                intent.putExtra("mode", "Normal");
+                startActivity(intent);
+
+
+            }
+        });
+        actionCardView2.addActionClickListener(R.id.button_task2Hacker, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Task2Activity.class);
+                intent.putExtra("mode", "Hacker");
+                startActivity(intent);
+
+
+            }
+        });
+
 
 
     }

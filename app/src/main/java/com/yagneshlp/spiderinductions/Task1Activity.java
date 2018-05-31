@@ -27,7 +27,7 @@ public class Task1Activity extends Activity {
     RelativeLayout layout;
     AutofitTextView Stopwatch, InspectionTime,ModeView;
     CountDownTimer inspection;
-    boolean isInspectTimerPaused = false, isInspectTimerRunning = false,isStopwatchRunning = false,beeped = false;
+    boolean isInspectTimerPaused = false, isInspectTimerRunning = false,isStopwatchRunning = false, beeped1 = false,beeped2 = false,beeped3 = false;
     String mode;
 
 
@@ -64,16 +64,35 @@ public class Task1Activity extends Activity {
                 InspectionTime.setText(String.format("%02d", millisUntilFinished/1000) + ":"
                         + String.format("%03d", ms) );
                 if(millisUntilFinished<3000 && mode.equals("Hacker")){
-                  if(!beeped){
-                      beeper();
-                      beeped =true;
+                  if(!beeped1){
+                      ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
+                      toneG.startTone(ToneGenerator.TONE_CDMA_ONE_MIN_BEEP, 400);
+                      beeped1 =true;
                   }
+
+                }
+                if(millisUntilFinished<2000 && mode.equals("Hacker")){
+                    if(!beeped2){
+                        ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
+                        toneG.startTone(ToneGenerator.TONE_CDMA_ONE_MIN_BEEP, 400);
+                        beeped2 =true;
+                    }
+
+                }
+                if(millisUntilFinished<1000 && mode.equals("Hacker")){
+                    if(!beeped3){
+                        ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
+                        toneG.startTone(ToneGenerator.TONE_CDMA_ONE_MIN_BEEP, 400);
+                        beeped3 =true;
+                    }
 
                 }
             }
 
             public void onFinish() {
                 InspectionTime.setText("00:000");
+                ToneGenerator toneG = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
+                toneG.startTone(ToneGenerator.TONE_CDMA_ONE_MIN_BEEP, 400);
                 isInspectTimerRunning = false;
                 StartTime = SystemClock.uptimeMillis();
                 handler.postDelayed(runnable, 0);

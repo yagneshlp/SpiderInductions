@@ -51,6 +51,31 @@
             android:textColor="@color/colorAccent"/>
 
     </com.adammcneilly.ActionCardView>
+    <com.adammcneilly.ActionCardView
+        android:id="@+id/action_cardTask2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/action_cardTask1"
+        app:cardCornerRadius="8dp"
+        app:cardTitle="Task 2"
+        app:cardDescription="Hangman">
+
+        <com.adammcneilly.ActionButton
+            android:id="@+id/button_task2Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Mode"
+            android:textColor="@color/colorAccent"/>
+
+        <com.adammcneilly.ActionButton
+            android:id="@+id/button_task2Hacker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hacker Mode"
+            android:textColor="@color/colorAccent"/>
+
+    </com.adammcneilly.ActionCardView>
 
 
     <me.grantland.widget.AutofitTextView
