@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.tasks;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import com.yagneshlp.spiderinductions.R;
 
 import me.grantland.widget.AutofitTextView;
 

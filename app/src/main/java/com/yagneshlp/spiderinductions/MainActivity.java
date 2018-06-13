@@ -1,22 +1,14 @@
 package com.yagneshlp.spiderinductions;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
-import android.os.Vibrator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.adammcneilly.ActionCardView;
-
-import java.util.Random;
-
-import in.shadowfax.proswipebutton.ProSwipeButton;
+import com.yagneshlp.spiderinductions.tasks.Task0Activity;
+import com.yagneshlp.spiderinductions.tasks.Task1Activity;
+import com.yagneshlp.spiderinductions.tasks.Task2Activity;
 
 public class MainActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.tasks;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,7 +15,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.yagneshlp.spiderinductions.ScoreKeeper;
+
+import com.yagneshlp.spiderinductions.R;
+import com.yagneshlp.spiderinductions.helper.ScoreKeeper;
 
 import java.util.Random;
 
