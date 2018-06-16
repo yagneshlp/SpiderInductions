@@ -37,4 +37,14 @@ dependencies {
     compile 'com.adammcneilly:actioncardview:1.0.1'
     compile 'com.mikhaellopez:circularfillableloaders:1.2.0'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.github.aniketbhoite:MutativeFab:1.0.8'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.rm:rmswitch:1.2.2'
+    compile 'lib.kingja.switchbutton:switchbutton:1.1.7'
+
+
 }

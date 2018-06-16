@@ -8,4 +8,10 @@
     <color name="red_failure">#ef481f</color>
     <color name="white">#fff</color>
     <color name="hackerMode">#f98b2a</color>
+    <color name="bg_row_background">#00d705</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+    <color name="high_priority">#f00</color>
+    <color name="medium_priority">#ffd800</color>
+    <color name="low_priority">#2eed37</color>
 </resources>

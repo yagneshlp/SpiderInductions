@@ -77,6 +77,27 @@
 
     </com.adammcneilly.ActionCardView>
 
+    <com.adammcneilly.ActionCardView
+        android:id="@+id/action_cardTask3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/action_cardTask2"
+        app:cardCornerRadius="8dp"
+        app:cardTitle="Task 3"
+        app:cardDescription="To-do app">
+
+        <com.adammcneilly.ActionButton
+            android:id="@+id/button_task3Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    </com.adammcneilly.ActionCardView>
+
 
     <me.grantland.widget.AutofitTextView
         android:id="@+id/tv"

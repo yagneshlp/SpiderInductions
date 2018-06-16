@@ -29,6 +29,8 @@ public class TasksDBHelper extends SQLiteOpenHelper {
     private static final String KEY_priority = "priority";
     private static final String KEY_taskID = "id";
 
+    public int noOfActiveTasks=0,noOfCompletedTasks=0;
+
 
 
     public TasksDBHelper(Context context) {
@@ -96,6 +98,7 @@ public class TasksDBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
         Log.d(TAG, "Fetching tasks from Sqlite: ");
         Log.d(TAG, "No of tasks fetched: " + cursor.getCount());
+        noOfActiveTasks = cursor.getCount();
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             for(int i=0;i<cursor.getCount();i++){
@@ -103,6 +106,7 @@ public class TasksDBHelper extends SQLiteOpenHelper {
                 tasks[i].title =  cursor.getString(1);
                 tasks[i].subTitle = cursor.getString(2);
                 tasks[i].priority = cursor.getString(3);
+                cursor.moveToNext();
             }
         }
         cursor.close();
@@ -117,6 +121,7 @@ public class TasksDBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
         Log.d(TAG, "Fetching tasks from SQLite: ");
         Log.d(TAG, "No of tasks fetched: " + cursor.getCount());
+        noOfCompletedTasks = cursor.getCount();
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             for(int i=0;i<cursor.getCount();i++){
@@ -124,6 +129,7 @@ public class TasksDBHelper extends SQLiteOpenHelper {
                 tasks[i].title =  cursor.getString(1);
                 tasks[i].subTitle = cursor.getString(2);
                 tasks[i].priority = cursor.getString(3);
+                cursor.moveToNext();
             }
         }
         cursor.close();
@@ -134,8 +140,29 @@ public class TasksDBHelper extends SQLiteOpenHelper {
     public void deleteTask(ToDoTask task) {
         SQLiteDatabase db = this.getWritableDatabase();
         // Delete All Rows
-        db.delete(TABLE_active, KEY_title + "="+task.title, null);
+        db.delete(TABLE_active, KEY_title + "= '"+task.title+"'", null);
         db.close();
         Log.d(TAG, "Task " + task.title +" has been Deleted");
+    }
+
+    public int getNoOfActiveTasks(){
+        String selectQuery = "SELECT  * FROM " + TABLE_active;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        Log.d(TAG, "Fetching tasks from Sqlite: ");
+        Log.d(TAG, "No of tasks fetched: " + cursor.getCount());
+        noOfActiveTasks = cursor.getCount();
+        return noOfActiveTasks;
+    }
+
+    public int getNoOfCompletedTasks(){
+
+        String selectQuery = "SELECT  * FROM " + TABLE_dead;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        Log.d(TAG, "Fetching tasks from SQLite: ");
+        Log.d(TAG, "No of tasks fetched: " + cursor.getCount());
+        noOfCompletedTasks = cursor.getCount();
+        return noOfCompletedTasks;
     }
 }
