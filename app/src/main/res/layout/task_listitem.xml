@@ -77,6 +77,16 @@
             android:textColor="@color/description"
             android:textSize="12dp" />
 
+        <ImageView
+            android:id="@+id/completed_icon"
+            android:layout_width="@dimen/ic_delete"
+            android:layout_height="@dimen/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padd_10"
+            android:visibility="gone"
+            android:src="@drawable/ic_completed_icon" />
+
        <!-- <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"

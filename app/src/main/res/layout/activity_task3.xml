@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         tools:context=".tasks.Task3Activity">
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
@@ -78,7 +78,7 @@
 
 
     </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 

@@ -3,6 +3,7 @@ package com.yagneshlp.spiderinductions.tasks;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -19,11 +20,12 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aniket.mutativefloatingactionbutton.MutativeFab;
-import com.rm.rmswitch.RMTristateSwitch;
+import com.yagneshlp.spiderinductions.SimpleWidgetProvider;
 import com.yagneshlp.spiderinductions.TaskListAdapter;
 import com.yagneshlp.spiderinductions.R;
 import com.yagneshlp.spiderinductions.RecyclerItemTouchHelper;
@@ -34,8 +36,6 @@ import com.yagneshlp.spiderinductions.helper.ToDoTask;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import lib.kingja.switchbutton.SwitchMultiButton;
 
 public class Task3Activity extends Activity implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener{
 
@@ -51,20 +51,42 @@ public class Task3Activity extends Activity implements RecyclerItemTouchHelper.R
     TextView tvA,tvC,tvM;
     String priorityState = "High";
     boolean isUndo = false;
+    ImageView tickIcon;
 
 
 
 
     @Override
+    public void onBackPressed() {
+        Intent updateWidget=new  Intent(getApplicationContext(), SimpleWidgetProvider.class);
+        updateWidget.setAction(SimpleWidgetProvider.Update_tasks);
+        sendBroadcast(updateWidget);
+        finishAffinity();
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Intent updateWidget=new  Intent(getApplicationContext(), SimpleWidgetProvider.class);
+        updateWidget.setAction(SimpleWidgetProvider.Update_tasks);
+        sendBroadcast(updateWidget);
+
+    }
+    @Override
     protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task3);
+
+        Intent updateWidget=new  Intent(getApplicationContext(), SimpleWidgetProvider.class);
+        updateWidget.setAction(SimpleWidgetProvider.Update_tasks);
+        sendBroadcast(updateWidget);
+
         dbHelper = new TasksDBHelper(getApplicationContext());
 
 
         tvA =findViewById(R.id.ActivedTaskMessage);
         tvC = findViewById(R.id.completedTaskMessage);
         tvM = findViewById(R.id.textViewMessage0Atasks);
+        tickIcon = findViewById(R.id.completed_icon);
 
 
 
@@ -78,6 +100,9 @@ public class Task3Activity extends Activity implements RecyclerItemTouchHelper.R
 
         taskListAdapterActive = new TaskListAdapter(this, activeTaskList);
         taskListAdapterCompleted = new TaskListAdapter(this,completedTaskList);
+
+        recyclerViewCompleted.setNestedScrollingEnabled(false);
+        recyclerViewActive.setNestedScrollingEnabled(false);
 
         RecyclerView.LayoutManager mLayoutManagerActive = new LinearLayoutManager(getApplicationContext());
         recyclerViewActive.setLayoutManager(mLayoutManagerActive);
@@ -172,6 +197,9 @@ public class Task3Activity extends Activity implements RecyclerItemTouchHelper.R
                             newTask.priority = priorityState;
                             dbHelper.addTask(newTask);
                             tasks = dbHelper.getActiveTasks();
+                            Intent updateWidget=new  Intent(getApplicationContext(), SimpleWidgetProvider.class);
+                            updateWidget.setAction(SimpleWidgetProvider.Update_tasks);
+                            sendBroadcast(updateWidget);
                             loadItemsOntoActiveTasksList();
                         }else{
                             Toast.makeText(Task3Activity.this,"Task not added due to insufficient Details!\nTry again.",Toast.LENGTH_SHORT).show();
@@ -260,6 +288,10 @@ public class Task3Activity extends Activity implements RecyclerItemTouchHelper.R
         // refreshing recycler view
         taskListAdapterActive.notifyDataSetChanged();
         Log.d(TAG, "Items loaded into Active tasks List succesfully");
+
+        Intent updateWidget=new  Intent(getApplicationContext(), SimpleWidgetProvider.class);
+        updateWidget.setAction(SimpleWidgetProvider.Update_tasks);
+        sendBroadcast(updateWidget);
 
     }
 
