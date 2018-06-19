@@ -11,6 +11,8 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import com.yagneshlp.spiderinductions.tasks.Task3Activity;
 
+import java.util.Random;
+
 public class SimpleWidgetProvider extends AppWidgetProvider {
 
     public static final String Update_tasks = "android.appwidget.action.APPWIDGET_UPDATE";
@@ -21,7 +23,8 @@ public class SimpleWidgetProvider extends AppWidgetProvider {
         if (intent.getAction().equals(Update_tasks)) {
             ComponentName component = new ComponentName(context,SimpleWidgetProvider.class);
             int appWidgetIds[] = mgr.getAppWidgetIds(component);
-            Log.e("received", intent.getAction());
+            Log.d("Msg from widgetProvider","OnRevieved Called");
+            Log.d("received", intent.getAction());
             mgr.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widgetListView);
             mgr.updateAppWidget(component,new RemoteViews(context.getPackageName(), R.layout.simple_widget));
             onUpdate(context,mgr,appWidgetIds);
@@ -32,6 +35,10 @@ public class SimpleWidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+
+        Log.d("Msg from widgetProvider","OnUpdate Called");
+        final int count = appWidgetIds.length;
+
         // update each of the app widgets with the remote adapter
         for (int i = 0; i < appWidgetIds.length; ++i) {
             // Set up the intent that starts the ListViewService, which will
@@ -39,6 +46,7 @@ public class SimpleWidgetProvider extends AppWidgetProvider {
             Intent intent = new Intent(context, WidgetRemoteViewsService.class);
             // Add the app widget ID to the intent extras.
             intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetIds[i]);
+            intent.putExtra("random", new Random().nextInt(900) + 100);               //This one Line fixed a problem that bugged me for 4 days. Hands down.
             intent.setData(Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME)));
             // Instantiate the RemoteViews object for the app widget layout.
             RemoteViews rv = new RemoteViews(context.getPackageName(), R.layout.simple_widget);
@@ -51,6 +59,9 @@ public class SimpleWidgetProvider extends AppWidgetProvider {
             Intent startActivityIntent = new Intent(context, Task3Activity.class);
             PendingIntent startActivityPendingIntent = PendingIntent.getActivity(context, 0, startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             rv.setPendingIntentTemplate(R.id.widgetListView, startActivityPendingIntent);
+
+
+
             // The empty view is displayed when the collection has no items.
             // It should be in the same layout used to instantiate the RemoteViews  object above.
             //rv.setEmptyView(R.id.list_view, R.id.empty_view);

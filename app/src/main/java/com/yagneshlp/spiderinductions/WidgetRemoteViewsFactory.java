@@ -81,7 +81,7 @@ public class WidgetRemoteViewsFactory implements RemoteViewsService.RemoteViewsF
 
         rv.setOnClickFillInIntent(R.id.widgetItemContainer, fillInIntent);
 
-    
+
         return rv;
 
     }
