@@ -25,11 +25,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aniket.mutativefloatingactionbutton.MutativeFab;
-import com.yagneshlp.spiderinductions.SimpleWidgetProvider;
-import com.yagneshlp.spiderinductions.TaskListAdapter;
+import com.yagneshlp.spiderinductions.widget.SimpleWidgetProvider;
+import com.yagneshlp.spiderinductions.helper.TaskListAdapter;
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.RecyclerItemTouchHelper;
-import com.yagneshlp.spiderinductions.RecyclerTouchListener;
+import com.yagneshlp.spiderinductions.helper.RecyclerItemTouchHelper;
+import com.yagneshlp.spiderinductions.helper.RecyclerTouchListener;
 import com.yagneshlp.spiderinductions.helper.TasksDBHelper;
 import com.yagneshlp.spiderinductions.helper.ToDoTask;
 

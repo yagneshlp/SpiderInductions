@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.widget;
 
 
 import android.content.Intent;

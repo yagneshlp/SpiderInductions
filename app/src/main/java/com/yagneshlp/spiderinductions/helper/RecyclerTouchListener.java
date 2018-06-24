@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.helper;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

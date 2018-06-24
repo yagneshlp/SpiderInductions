@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.widget.RemoteViews;
+
+import com.yagneshlp.spiderinductions.R;
 import com.yagneshlp.spiderinductions.tasks.Task3Activity;
 
 import java.util.Random;

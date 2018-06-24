@@ -14,4 +14,5 @@
     <color name="high_priority">#f00</color>
     <color name="medium_priority">#ffd800</color>
     <color name="low_priority">#2eed37</color>
+    <color name="musixmatchOrange">#FF6050</color>
 </resources>
