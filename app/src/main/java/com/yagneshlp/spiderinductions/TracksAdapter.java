@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.yagneshlp.spiderinductions.pojo.pojo_tracks.TrackList;
+import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackList;
 
 import java.util.List;
 
-public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksViewHolder> {
+public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksViewHolder>  {
 
     private List<TrackList> movies;
     private int rowLayout;
@@ -61,4 +61,6 @@ public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksView
     public int getItemCount() {
         return movies.size();
     }
+
+
 }

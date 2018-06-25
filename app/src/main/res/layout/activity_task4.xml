@@ -1,31 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:fitsSystemWindows="true"
+    tools:context=".ScrollingActivity">
 
-    <LinearLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Goodplays"
-            android:paddingLeft="20dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="50dp"/>
-
-        <android.support.v7.widget.RecyclerView
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:background="@drawable/rounded_corners"
-            android:id="@+id/topTracks"/>
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/musixmatchOrange"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
 
-    </LinearLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:backgroundTint="#66336E"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_search" />
+
+    <com.github.fabtransitionactivity.SheetLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        app:ft_container_gravity="center"
+        app:ft_color="#66336E"
+        android:elevation="2dp"/>
 
 </android.support.design.widget.CoordinatorLayout>

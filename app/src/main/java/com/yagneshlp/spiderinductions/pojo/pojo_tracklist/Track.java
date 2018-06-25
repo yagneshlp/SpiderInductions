@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.pojo.pojo_tracks;
+package com.yagneshlp.spiderinductions.pojo.pojo_tracklist;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

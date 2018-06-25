@@ -1,9 +1,9 @@
-package com.yagneshlp.spiderinductions.pojo.pojo_tracks;
+package com.yagneshlp.spiderinductions.pojo.pojo_tracklist;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class MusicTrackResponse {
+public class TrackListResponse {
 
     @SerializedName("message")
     @Expose
