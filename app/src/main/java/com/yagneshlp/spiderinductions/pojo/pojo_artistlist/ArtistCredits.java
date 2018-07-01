@@ -1,5 +1,5 @@
 
-package com.yagneshlp.spiderinductions.pojo.pojo_artists;
+package com.yagneshlp.spiderinductions.pojo.pojo_artistlist;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

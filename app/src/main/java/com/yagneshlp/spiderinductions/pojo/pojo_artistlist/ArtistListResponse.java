@@ -1,10 +1,10 @@
 
-package com.yagneshlp.spiderinductions.pojo.pojo_artists;
+package com.yagneshlp.spiderinductions.pojo.pojo_artistlist;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ArtistResponse {
+public class ArtistListResponse {
 
     @SerializedName("message")
     @Expose

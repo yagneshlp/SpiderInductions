@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.adammcneilly.ActionCardView;
-import com.yagneshlp.spiderinductions.tasks.Task0Activity;
-import com.yagneshlp.spiderinductions.tasks.Task1Activity;
-import com.yagneshlp.spiderinductions.tasks.Task2Activity;
-import com.yagneshlp.spiderinductions.tasks.Task3Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_0.Task0Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_1.Task1Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_2.Task2Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_3.Task3Activity;
 
 public class MainActivity extends Activity {
 

@@ -1,12 +1,15 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.tasks.Task_4;
 
+import android.app.Activity;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class SearchActivity extends AppCompatActivity {
+import com.yagneshlp.spiderinductions.R;
+
+public class SearchActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

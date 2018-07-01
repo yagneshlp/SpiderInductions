@@ -19,14 +19,14 @@
                 <category android:name="android.intent.category.Default" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks.Task0Activity">
+        <activity android:name=".tasks.Task_0.Task0Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks.Task1Activity">
+        <activity android:name=".tasks.Task_1.Task1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".tasks.Task2Activity"
+            android:name=".tasks.Task_2.Task2Activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,7 +42,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks.Task3Activity">
+        <activity android:name=".tasks.Task_3.Task3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Task4Activity"
+            android:name=".tasks.Task_4.Task4Activity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,21 +80,12 @@
             android:name=".widget.WidgetRemoteViewsService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
+        <activity android:name=".tasks.Task_4.SearchActivity" />
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".SearchActivity" />
-        <activity
-            android:name=".TrackViewActivity"
+            android:name=".tasks.Task_4.TrackViewActivity"
             android:label="@string/title_activity_track_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".tasks.Task_4.ArtistViewActivity"></activity>
     </application>
 
 </manifest>

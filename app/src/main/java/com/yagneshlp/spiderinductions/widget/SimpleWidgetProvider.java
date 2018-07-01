@@ -11,7 +11,7 @@ import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.tasks.Task3Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_3.Task3Activity;
 
 import java.util.Random;
 

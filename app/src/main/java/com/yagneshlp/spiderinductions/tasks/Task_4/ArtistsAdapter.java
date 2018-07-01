@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions;
+package com.yagneshlp.spiderinductions.tasks.Task_4;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,18 +8,19 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackList;
+import com.yagneshlp.spiderinductions.R;
+import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistList;
 
 import java.util.List;
 
-public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksViewHolder>  {
+public class ArtistsAdapter extends RecyclerView.Adapter<ArtistsAdapter.ArtistsViewHolder> {
 
-    private List<TrackList> movies;
+    private List<ArtistList> movies;
     private int rowLayout;
     private Context context;
 
 
-    public static class TracksViewHolder extends RecyclerView.ViewHolder {
+    public static class ArtistsViewHolder extends RecyclerView.ViewHolder {
         FrameLayout trackLayout;
         TextView trackName;
         TextView artistNAme;
@@ -27,7 +28,7 @@ public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksView
         TextView rating;
 
 
-        public TracksViewHolder(View v) {
+        public ArtistsViewHolder(View v) {
             super(v);
             trackLayout = (FrameLayout) v.findViewById(R.id.trackLayout);
             trackName = (TextView) v.findViewById(R.id.track_name);
@@ -36,24 +37,24 @@ public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksView
         }
     }
 
-    public TracksAdapter(List<TrackList> tracks, int rowLayout, Context context) {
+    public ArtistsAdapter(List<ArtistList> tracks, int rowLayout, Context context) {
         this.movies = tracks;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public TracksViewHolder onCreateViewHolder(ViewGroup parent,
-                                               int viewType) {
+    public ArtistsViewHolder onCreateViewHolder(ViewGroup parent,
+                                                int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new TracksViewHolder(view);
+        return new ArtistsViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(TracksViewHolder holder, final int position) {
-        holder.trackName.setText(movies.get(position).getTrack().getTrackName());
-        holder.artistNAme.setText(movies.get(position).getTrack().getArtistName());
+    public void onBindViewHolder(ArtistsViewHolder holder, final int position) {
+        holder.trackName.setText(movies.get(position).getArtist().getArtistName());
+        holder.artistNAme.setText(movies.get(position).getArtist().getArtistCountry());
 
     }
 
@@ -61,6 +62,4 @@ public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksView
     public int getItemCount() {
         return movies.size();
     }
-
-
 }
