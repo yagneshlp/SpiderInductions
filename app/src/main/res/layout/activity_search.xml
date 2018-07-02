@@ -8,18 +8,114 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"   />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           android:layout_marginTop="30dp"
+            android:gravity="center">
+
+
+
+            <EditText
+                android:id="@+id/search_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Serach for..."
+                android:imeOptions="actionSearch"/>
+
+            <com.polyak.iconswitch.IconSwitch
+                android:id="@+id/icon_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:isw_icon_left="@drawable/ic_track"
+                app:isw_icon_right="@drawable/ic_artist"
+                app:isw_icon_size="30dp"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/musixmatchOrange"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Search" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/SeearchBanner">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="search results for"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&quot;Keywords&quot;"
+                    android:layout_marginTop="-10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="30dp"
+                    android:id="@+id/keyword"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/mode"
+                    android:text="in Tracks"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:id="@+id/search_results"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progressLayout"
+            android:visibility="gone"
+            android:padding="100dp">
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
 
 
     </LinearLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>

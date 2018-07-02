@@ -2,6 +2,8 @@ package com.yagneshlp.spiderinductions.tasks.Task_4;
 
 import com.yagneshlp.spiderinductions.pojo.pojo_artist.ArtistResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistListResponse;
+import com.yagneshlp.spiderinductions.pojo.pojo_search_artistlist.ArtistListSearchResponse;
+import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackListSearchResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_track.TrackResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackListResponse;
 
@@ -25,6 +27,9 @@ public interface ApiInterface {
 
 
     @GET("track.search")
-    Call<TrackListResponse> getTrackSearchResult(@Query("apikey") String apiKey, @Query("page") int page, @Query("Page_size") int page_size, @Query("q_track") String track_keywords, @Query("s_track_rating") String sorting_order, @Query("format") String format);
+    Call<TrackListSearchResponse> getTrackSearchResult(@Query("apikey") String apiKey, @Query("page") int page, @Query("page_size") int page_size, @Query("q_track") String track_keywords, @Query("s_track_rating") String sorting_order, @Query("format") String format);
+
+    @GET("artist.search")
+    Call<ArtistListSearchResponse> getArtistSearchResult(@Query("apikey") String apiKey, @Query("page") int page, @Query("page_size") int page_size, @Query("q_artist") String track_keywords,  @Query("format") String format);
 
 }

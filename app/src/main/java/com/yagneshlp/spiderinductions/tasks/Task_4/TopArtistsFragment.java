@@ -57,8 +57,6 @@ public class TopArtistsFragment extends Fragment {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-
-
         Call<ArtistListResponse> callTopArtists = apiService.getTopRatedArtists(API_KEY,1,15,"in");
         callTopArtists.enqueue(new Callback<ArtistListResponse>() {
             @Override

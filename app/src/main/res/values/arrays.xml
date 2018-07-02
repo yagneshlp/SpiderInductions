@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="switch_priority">
-        <item>High</item>
-        <item>Medium</item>
-        <item>Low</item>
+    <string-array name="search_mode">
+        <item>Tracks</item>
+        <item>Artists</item>
     </string-array>
 
 </resources>

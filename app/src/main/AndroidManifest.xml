@@ -80,7 +80,14 @@
             android:name=".widget.WidgetRemoteViewsService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
-        <activity android:name=".tasks.Task_4.SearchActivity" />
+        <activity android:name=".tasks.Task_4.SearchActivity"
+            android:windowSoftInputMode="stateVisible">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".tasks.Task_4.TrackViewActivity"
             android:label="@string/title_activity_track_view"
