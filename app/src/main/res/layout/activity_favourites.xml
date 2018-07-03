@@ -5,18 +5,53 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="20dp"
     tools:context=".tasks.Task_4.FavouritesActivity">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="theese are your"
+            android:textStyle="italic"
+            android:textColor="@color/background"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favourite Tracks"
+            android:textStyle="bold"
+            android:layout_marginTop="-10dp"
+            android:textSize="40dp"
+            android:textColor="@color/background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textAlignment="center"
+            android:id="@+id/message"
+            android:text="No Favourite xxx Found! \nYou can add a favourite xxx by clicking the Star button on the xxx's info page. " />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:id="@+id/favourites"/>
+
+    </LinearLayout>
+
+
+
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

@@ -94,9 +94,16 @@
             android:label="@string/title_activity_track_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".tasks.Task_4.ArtistViewActivity" />
+
         <activity
             android:name=".tasks.Task_4.FavouritesActivity"
-            android:label="@string/title_activity_favourites"></activity>
+            android:label="@string/title_activity_favourites">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
