@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.helper;
+package com.yagneshlp.spiderinductions.tasks.Task_3;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 
 
 import com.yagneshlp.spiderinductions.R;
+import com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask.ToDoTask;
 
 import java.util.List;
 

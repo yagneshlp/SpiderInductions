@@ -26,12 +26,9 @@ import android.widget.Toast;
 
 import com.aniket.mutativefloatingactionbutton.MutativeFab;
 import com.yagneshlp.spiderinductions.widget.SimpleWidgetProvider;
-import com.yagneshlp.spiderinductions.helper.TaskListAdapter;
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.helper.RecyclerItemTouchHelper;
 import com.yagneshlp.spiderinductions.helper.RecyclerTouchListener;
-import com.yagneshlp.spiderinductions.helper.TasksDBHelper;
-import com.yagneshlp.spiderinductions.helper.ToDoTask;
+import com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask.ToDoTask;
 
 import java.util.ArrayList;
 import java.util.Arrays;

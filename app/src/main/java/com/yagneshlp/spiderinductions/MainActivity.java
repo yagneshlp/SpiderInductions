@@ -10,6 +10,7 @@ import com.yagneshlp.spiderinductions.tasks.Task_0.Task0Activity;
 import com.yagneshlp.spiderinductions.tasks.Task_1.Task1Activity;
 import com.yagneshlp.spiderinductions.tasks.Task_2.Task2Activity;
 import com.yagneshlp.spiderinductions.tasks.Task_3.Task3Activity;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Task4Activity;
 
 public class MainActivity extends Activity {
 
@@ -18,11 +19,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionCardView actionCardView0,actionCardView1,actionCardView2,actionCardView3;
+        ActionCardView actionCardView0,actionCardView1,actionCardView2,actionCardView3,actionCardView4;
         actionCardView0 = (ActionCardView) findViewById(R.id.action_card);
         actionCardView1 = (ActionCardView) findViewById(R.id.action_cardTask1);
         actionCardView2 = (ActionCardView) findViewById(R.id.action_cardTask2) ;
         actionCardView3 = (ActionCardView) findViewById(R.id.action_cardTask3) ;
+        actionCardView4 = findViewById(R.id.action_cardTask4);
 
         actionCardView0.addActionClickListener(R.id.button_task0, new View.OnClickListener() {
             @Override
@@ -84,6 +86,17 @@ public class MainActivity extends Activity {
 
             }
         });
+        actionCardView4.addActionClickListener(R.id.button_task4Normal, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Task4Activity.class);
+                intent.putExtra("mode", "Hacker");
+                startActivity(intent);
+
+
+            }
+        });
+
 
 
 

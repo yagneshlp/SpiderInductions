@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.helper;
+package com.yagneshlp.spiderinductions.tasks.Task_3;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask.ToDoTask;
 
 
 public class TasksDBHelper extends SQLiteOpenHelper {

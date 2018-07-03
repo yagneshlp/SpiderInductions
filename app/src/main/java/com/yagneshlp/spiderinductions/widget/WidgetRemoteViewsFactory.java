@@ -8,8 +8,8 @@ import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.helper.TasksDBHelper;
-import com.yagneshlp.spiderinductions.helper.ToDoTask;
+import com.yagneshlp.spiderinductions.tasks.Task_3.TasksDBHelper;
+import com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask.ToDoTask;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,9 +1,11 @@
-package com.yagneshlp.spiderinductions.helper;
+package com.yagneshlp.spiderinductions.tasks.Task_3;
 
 import android.graphics.Canvas;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
+
+import com.yagneshlp.spiderinductions.tasks.Task_3.TaskListAdapter;
 
 
 public class RecyclerItemTouchHelper extends ItemTouchHelper.SimpleCallback {

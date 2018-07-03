@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".tasks.Task_4.TrackViewActivity"
+android:background="@color/background"
+tools:showIn="@layout/activity_track_view">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:id="@+id/trackView"
+    android:visibility="gone"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        xmlns:autofit="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/musixmatchOrange"
+            android:elevation="4dp"                >
+
+            <ImageButton
+                android:id="@+id/album_art"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/musixmatchOrange"
+                android:elevation="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/low" />
+
+            <TextView
+                android:id="@+id/track_name"
+                android:text="hi"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:elevation="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                android:layout_centerVertical="true"
+                android:marqueeRepeatLimit ="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:textColor="#fff"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/track_name"
+                android:layout_centerHorizontal="true"
+                android:marqueeRepeatLimit ="marquee_forever"
+                android:focusable="true"
+                android:layout_centerVertical="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:text=""
+                android:elevation="6dp"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:layout_marginTop="25dp"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:textSize="10dp"
+                android:text="Album" />
+
+            <TextView
+                android:id="@+id/album_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:gravity="center"
+               android:textColor="@color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:textSize="20dp"
+                android:text="Android Profile UI Design" />
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:textSize="10dp"
+                android:text="Genre" />
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:textSize="15dp"
+                android:text="Android Profile XMl UI Design" />
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:textSize="10dp"
+                android:text="Year" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:clickable="true"
+                android:elevation="1dp"
+                android:textSize="15dp"
+                android:text="Android Profile UI Design" />
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progrssview"
+        android:gravity="center"
+        >
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="162dp"
+            android:layout_height="141dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

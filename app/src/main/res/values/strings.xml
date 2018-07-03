@@ -94,4 +94,8 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_track_view">TrackViewActivity</string>
+    <string name="title_activity_favourites">FavouritesActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

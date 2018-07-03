@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.helper;
+package com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask;
 
 public class ToDoTask {
     public String title,subTitle,priority;

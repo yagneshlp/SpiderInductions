@@ -80,7 +80,8 @@
             android:name=".widget.WidgetRemoteViewsService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
-        <activity android:name=".tasks.Task_4.SearchActivity"
+        <activity
+            android:name=".tasks.Task_4.SearchActivity"
             android:windowSoftInputMode="stateVisible">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,7 +93,10 @@
             android:name=".tasks.Task_4.TrackViewActivity"
             android:label="@string/title_activity_track_view"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".tasks.Task_4.ArtistViewActivity"></activity>
+        <activity android:name=".tasks.Task_4.ArtistViewActivity" />
+        <activity
+            android:name=".tasks.Task_4.FavouritesActivity"
+            android:label="@string/title_activity_favourites"></activity>
     </application>
 
 </manifest>

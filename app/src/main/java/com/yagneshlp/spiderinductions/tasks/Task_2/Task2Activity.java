@@ -17,7 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.helper.ScoreKeeper;
 
 import java.util.Random;
 
