@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,26 +9,25 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackList;
+import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteTrack;
 
 import java.util.List;
 
-public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksViewHolder>  {
+public class FavouriteTracksAdapter extends RecyclerView.Adapter<FavouriteTracksAdapter.FavouriteTracksHolder>  {
 
-    private List<TrackList> movies;
+    private List<FavouriteTrack> movies;
     private int rowLayout;
     private Context context;
 
 
-    public static class TracksViewHolder extends RecyclerView.ViewHolder {
+    public static class FavouriteTracksHolder extends RecyclerView.ViewHolder {
         FrameLayout trackLayout;
         TextView trackName;
         TextView artistNAme;
-        TextView movieDescription;
-        TextView rating;
 
 
-        public TracksViewHolder(View v) {
+
+        public FavouriteTracksHolder(View v) {
             super(v);
             trackLayout = (FrameLayout) v.findViewById(R.id.trackLayout);
             trackName = (TextView) v.findViewById(R.id.track_name);
@@ -37,24 +36,24 @@ public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksView
         }
     }
 
-    public TracksAdapter(List<TrackList> tracks, int rowLayout, Context context) {
+    public FavouriteTracksAdapter(List<FavouriteTrack> tracks, int rowLayout, Context context) {
         this.movies = tracks;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public TracksViewHolder onCreateViewHolder(ViewGroup parent,
+    public FavouriteTracksHolder onCreateViewHolder(ViewGroup parent,
                                                int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new TracksViewHolder(view);
+        return new FavouriteTracksHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(TracksViewHolder holder, final int position) {
-        holder.trackName.setText(movies.get(position).getTrack().getTrackName());
-        holder.artistNAme.setText(movies.get(position).getTrack().getArtistName());
+    public void onBindViewHolder(FavouriteTracksHolder holder, final int position) {
+        holder.trackName.setText(movies.get(position).getTrack_name());
+        holder.artistNAme.setText(movies.get(position).getArtist_name());
 
     }
 

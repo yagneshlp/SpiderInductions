@@ -16,6 +16,10 @@ import com.yagneshlp.spiderinductions.helper.RecyclerTouchListener;
 import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.Artist;
 import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistList;
 import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistListResponse;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Adapters.ArtistsAdapter;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiClient;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiInterface;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.Constants;
 
 import java.util.List;
 

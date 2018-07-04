@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,19 +9,18 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistList;
-import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackList;
+import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackList;
 
 import java.util.List;
 
-public class SearchViewTracksAdapter extends RecyclerView.Adapter<SearchViewTracksAdapter.SearchViewTracksHolder> {
+public class TracksAdapter extends RecyclerView.Adapter<TracksAdapter.TracksViewHolder>  {
 
     private List<TrackList> movies;
     private int rowLayout;
     private Context context;
 
 
-    public static class SearchViewTracksHolder extends RecyclerView.ViewHolder {
+    public static class TracksViewHolder extends RecyclerView.ViewHolder {
         FrameLayout trackLayout;
         TextView trackName;
         TextView artistNAme;
@@ -29,31 +28,31 @@ public class SearchViewTracksAdapter extends RecyclerView.Adapter<SearchViewTrac
         TextView rating;
 
 
-        public SearchViewTracksHolder(View v) {
+        public TracksViewHolder(View v) {
             super(v);
             trackLayout = (FrameLayout) v.findViewById(R.id.trackLayout);
-            trackName = (TextView) v.findViewById(R.id.item_name);
-            artistNAme = (TextView) v.findViewById(R.id.additional_info);
+            trackName = (TextView) v.findViewById(R.id.track_name);
+            artistNAme = (TextView) v.findViewById(R.id.artist_name);
 
         }
     }
 
-    public SearchViewTracksAdapter(List<com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackList> tracks, int rowLayout, Context context) {
+    public TracksAdapter(List<TrackList> tracks, int rowLayout, Context context) {
         this.movies = tracks;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public SearchViewTracksHolder onCreateViewHolder(ViewGroup parent,
-                                                int viewType) {
+    public TracksViewHolder onCreateViewHolder(ViewGroup parent,
+                                               int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new SearchViewTracksHolder(view);
+        return new TracksViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(SearchViewTracksHolder holder, final int position) {
+    public void onBindViewHolder(TracksViewHolder holder, final int position) {
         holder.trackName.setText(movies.get(position).getTrack().getTrackName());
         holder.artistNAme.setText(movies.get(position).getTrack().getArtistName());
 
@@ -63,4 +62,6 @@ public class SearchViewTracksAdapter extends RecyclerView.Adapter<SearchViewTrac
     public int getItemCount() {
         return movies.size();
     }
+
+
 }

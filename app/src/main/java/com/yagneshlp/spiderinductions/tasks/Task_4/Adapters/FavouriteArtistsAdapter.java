@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,18 +9,18 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.yagneshlp.spiderinductions.R;
-import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistList;
+import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteArtist;
 
 import java.util.List;
 
-public class ArtistsAdapter extends RecyclerView.Adapter<ArtistsAdapter.ArtistsViewHolder> {
+public class FavouriteArtistsAdapter extends RecyclerView.Adapter<FavouriteArtistsAdapter.FavouriteArtistsHolder> {
 
-    private List<ArtistList> movies;
+    private List<FavouriteArtist> movies;
     private int rowLayout;
     private Context context;
 
 
-    public static class ArtistsViewHolder extends RecyclerView.ViewHolder {
+    public static class FavouriteArtistsHolder extends RecyclerView.ViewHolder {
         FrameLayout trackLayout;
         TextView trackName;
         TextView artistNAme;
@@ -28,7 +28,7 @@ public class ArtistsAdapter extends RecyclerView.Adapter<ArtistsAdapter.ArtistsV
         TextView rating;
 
 
-        public ArtistsViewHolder(View v) {
+        public FavouriteArtistsHolder(View v) {
             super(v);
             trackLayout = (FrameLayout) v.findViewById(R.id.trackLayout);
             trackName = (TextView) v.findViewById(R.id.track_name);
@@ -37,24 +37,24 @@ public class ArtistsAdapter extends RecyclerView.Adapter<ArtistsAdapter.ArtistsV
         }
     }
 
-    public ArtistsAdapter(List<ArtistList> tracks, int rowLayout, Context context) {
+    public FavouriteArtistsAdapter(List<FavouriteArtist> tracks, int rowLayout, Context context) {
         this.movies = tracks;
         this.rowLayout = rowLayout;
         this.context = context;
     }
 
     @Override
-    public ArtistsViewHolder onCreateViewHolder(ViewGroup parent,
-                                                int viewType) {
+    public FavouriteArtistsHolder onCreateViewHolder(ViewGroup parent,
+                                                     int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(rowLayout, parent, false);
-        return new ArtistsViewHolder(view);
+        return new FavouriteArtistsHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(ArtistsViewHolder holder, final int position) {
-        holder.trackName.setText(movies.get(position).getArtist().getArtistName());
-        holder.artistNAme.setText(movies.get(position).getArtist().getArtistCountry());
+    public void onBindViewHolder(FavouriteArtistsHolder holder, final int position) {
+        holder.trackName.setText(movies.get(position).getArtist_name());
+        holder.artistNAme.setText(" ");
 
     }
 

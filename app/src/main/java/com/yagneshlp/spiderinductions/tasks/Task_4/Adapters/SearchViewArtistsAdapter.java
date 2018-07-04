@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.yagneshlp.spiderinductions.R;
 import com.yagneshlp.spiderinductions.pojo.pojo_search_artistlist.ArtistList;
-import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackList;
 
 import java.util.List;
 

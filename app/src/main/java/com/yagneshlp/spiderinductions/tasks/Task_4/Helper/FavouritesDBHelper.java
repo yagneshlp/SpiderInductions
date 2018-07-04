@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Helper;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.yagneshlp.spiderinductions.pojo.pojo_ToDoTask.ToDoTask;
 import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteArtist;
 import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteTrack;
 
@@ -39,6 +38,8 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
     private static final String KEY_artist_name = "name";
     private static final String KEY_artist_genre = "genre";
     private static final String KEY_artist_rating = "rating";
+
+    private int noOfTracks=0,noOfArtists=0;
 
 
 
@@ -223,6 +224,7 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
         Log.d(TAG, "Fetching tracks from Sqlite: ");
         Log.d(TAG, "No of tracks fetched: " + cursor.getCount());
+        noOfTracks = cursor.getCount();
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             for(int i=0;i<cursor.getCount();i++){
@@ -248,6 +250,7 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
         Log.d(TAG, "Fetching artists from Sqlite: ");
         Log.d(TAG, "No of artists fetched: " + cursor.getCount());
+        noOfArtists = cursor.getCount();
         cursor.moveToFirst();
         if (cursor.getCount() > 0) {
             for(int i=0;i<cursor.getCount();i++){
@@ -262,6 +265,14 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return artistlist;
+    }
+
+    public int getNoOfTracks() {
+        return noOfTracks;
+    }
+
+    public int getNoOfArtists() {
+        return noOfArtists;
     }
 }
 

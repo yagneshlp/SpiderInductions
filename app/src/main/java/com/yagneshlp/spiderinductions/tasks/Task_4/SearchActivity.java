@@ -23,14 +23,17 @@ import android.widget.Toast;
 import com.polyak.iconswitch.IconSwitch;
 import com.yagneshlp.spiderinductions.R;
 import com.yagneshlp.spiderinductions.helper.RecyclerTouchListener;
-import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.Artist;
 
 import com.yagneshlp.spiderinductions.pojo.pojo_search_artistlist.ArtistList;
 import com.yagneshlp.spiderinductions.pojo.pojo_search_artistlist.ArtistListSearchResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.Track;
 import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackList;
-import com.yagneshlp.spiderinductions.pojo.pojo_tracklist.TrackListResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackListSearchResponse;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Adapters.SearchViewArtistsAdapter;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Adapters.SearchViewTracksAdapter;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiClient;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiInterface;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.Constants;
 
 import java.util.List;
 

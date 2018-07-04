@@ -5,135 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:paddingTop="30dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.adammcneilly.ActionCardView
-        android:id="@+id/action_card"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="8dp"
-        app:cardTitle="Task 0"
-        app:cardDescription="Pay the Piper">
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View"
-            android:textColor="@color/colorAccent"/>
+            <com.adammcneilly.ActionCardView
+                android:id="@+id/action_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardTitle="Task 0"
+                app:cardDescription="Pay the Piper">
 
-    </com.adammcneilly.ActionCardView>
-    <com.adammcneilly.ActionCardView
-        android:id="@+id/action_cardTask1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/action_card"
-        app:cardCornerRadius="8dp"
-        app:cardTitle="Task 1"
-        app:cardDescription="The Rubik’s cube timer">
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View"
+                    android:textColor="@color/colorAccent"/>
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task1Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Normal Mode"
-            android:textColor="@color/colorAccent"/>
+            </com.adammcneilly.ActionCardView>
+            <com.adammcneilly.ActionCardView
+                android:id="@+id/action_cardTask1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@id/action_card"
+                app:cardCornerRadius="8dp"
+                app:cardTitle="Task 1"
+                app:cardDescription="The Rubik’s cube timer">
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task1Hacker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hacker Mode"
-            android:textColor="@color/colorAccent"/>
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task1Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Mode"
+                    android:textColor="@color/colorAccent"/>
 
-    </com.adammcneilly.ActionCardView>
-    <com.adammcneilly.ActionCardView
-        android:id="@+id/action_cardTask2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/action_cardTask1"
-        app:cardCornerRadius="8dp"
-        app:cardTitle="Task 2"
-        app:cardDescription="Hangman">
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task1Hacker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hacker Mode"
+                    android:textColor="@color/colorAccent"/>
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task2Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Normal Mode"
-            android:textColor="@color/colorAccent"/>
+            </com.adammcneilly.ActionCardView>
+            <com.adammcneilly.ActionCardView
+                android:id="@+id/action_cardTask2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@id/action_cardTask1"
+                app:cardCornerRadius="8dp"
+                app:cardTitle="Task 2"
+                app:cardDescription="Hangman">
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task2Hacker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hacker Mode"
-            android:textColor="@color/colorAccent"/>
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task2Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Mode"
+                    android:textColor="@color/colorAccent"/>
 
-    </com.adammcneilly.ActionCardView>
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task2Hacker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hacker Mode"
+                    android:textColor="@color/colorAccent"/>
 
-    <com.adammcneilly.ActionCardView
-        android:id="@+id/action_cardTask3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/action_cardTask2"
-        app:cardCornerRadius="8dp"
-        app:cardTitle="Task 3"
-        app:cardDescription="To-do app">
+            </com.adammcneilly.ActionCardView>
 
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task3Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View"
-            android:textColor="@color/colorAccent"/>
+            <com.adammcneilly.ActionCardView
+                android:id="@+id/action_cardTask3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@id/action_cardTask2"
+                app:cardCornerRadius="8dp"
+                app:cardTitle="Task 3"
+                app:cardDescription="To-do app">
 
-
-
-    </com.adammcneilly.ActionCardView>
-
-    <com.adammcneilly.ActionCardView
-        android:id="@+id/action_cardTask4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/action_cardTask2"
-        app:cardCornerRadius="8dp"
-        app:cardTitle="Task 4"
-        app:cardDescription="Goodplays">
-
-        <com.adammcneilly.ActionButton
-            android:id="@+id/button_task4Normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View"
-            android:textColor="@color/colorAccent"/>
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task3Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View"
+                    android:textColor="@color/colorAccent"/>
 
 
 
-    </com.adammcneilly.ActionCardView>
+            </com.adammcneilly.ActionCardView>
+
+            <com.adammcneilly.ActionCardView
+                android:id="@+id/action_cardTask4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@id/action_cardTask3"
+                app:cardCornerRadius="8dp"
+                app:cardTitle="Task 4"
+                app:cardDescription="Goodplays">
+
+                <com.adammcneilly.ActionButton
+                    android:id="@+id/button_task4Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View"
+                    android:textColor="@color/colorAccent"/>
 
 
-    <me.grantland.widget.AutofitTextView
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:maxLines="1"
-        android:layout_alignParentBottom="true"
-        android:paddingBottom="20sp"
-        android:text="App developed by Yagnesh L P for Spider Inductions "
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textSize="10dp">
 
-    </me.grantland.widget.AutofitTextView>
+            </com.adammcneilly.ActionCardView>
+
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="20sp"
+                android:text="App developed by Yagnesh L P for Spider Inductions "
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="10dp">
+
+            </me.grantland.widget.AutofitTextView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
 
 
 </RelativeLayout>

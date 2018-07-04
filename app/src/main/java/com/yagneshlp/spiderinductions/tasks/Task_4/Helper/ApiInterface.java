@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Helper;
 
 import com.yagneshlp.spiderinductions.pojo.pojo_artist.ArtistResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_artistlist.ArtistListResponse;

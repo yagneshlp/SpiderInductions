@@ -1,4 +1,4 @@
-package com.yagneshlp.spiderinductions.tasks.Task_4;
+package com.yagneshlp.spiderinductions.tasks.Task_4.Helper;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -3,7 +3,6 @@ package com.yagneshlp.spiderinductions.tasks.Task_4;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
@@ -22,9 +21,10 @@ import com.yagneshlp.spiderinductions.R;
 import com.yagneshlp.spiderinductions.pojo.pojo_artist.Artist;
 import com.yagneshlp.spiderinductions.pojo.pojo_artist.ArtistResponse;
 import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteArtist;
-import com.yagneshlp.spiderinductions.pojo.pojo_favourites.FavouriteTrack;
-import com.yagneshlp.spiderinductions.tasks.Task_4.ApiClient;
-import com.yagneshlp.spiderinductions.tasks.Task_4.ApiInterface;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiClient;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.ApiInterface;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.Constants;
+import com.yagneshlp.spiderinductions.tasks.Task_4.Helper.FavouritesDBHelper;
 
 
 import retrofit2.Call;
