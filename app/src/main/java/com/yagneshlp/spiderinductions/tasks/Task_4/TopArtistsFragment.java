@@ -27,7 +27,6 @@ public class TopArtistsFragment extends Fragment {
 
     List<ArtistList> artistList;
     RelativeLayout mainLayout,progressLayout;
-    private final static String API_KEY = "ed01bfe66adb321a2b23bed6c4b7d7ba";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,7 +56,7 @@ public class TopArtistsFragment extends Fragment {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<ArtistListResponse> callTopArtists = apiService.getTopRatedArtists(API_KEY,1,15,"in");
+        Call<ArtistListResponse> callTopArtists = apiService.getTopRatedArtists(new Constants().getApiKey(),1,15,"in");
         callTopArtists.enqueue(new Callback<ArtistListResponse>() {
             @Override
             public void onResponse(Call<ArtistListResponse>call, Response<ArtistListResponse> response) {

@@ -27,7 +27,6 @@ public class TopTracksFragment extends Fragment {
 
     List<TrackList> trackList;
     RelativeLayout mainLayout,progressLayout;
-    private final static String API_KEY = "ed01bfe66adb321a2b23bed6c4b7d7ba";
 
 
     @Override
@@ -58,7 +57,7 @@ public class TopTracksFragment extends Fragment {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<TrackListResponse> callTopTracks = apiService.getTopRatedSongs(API_KEY,1,15,"in");
+        Call<TrackListResponse> callTopTracks = apiService.getTopRatedSongs(new Constants().getApiKey(),1,15,"in");
 
         callTopTracks.enqueue(new Callback<TrackListResponse>() {
             @Override

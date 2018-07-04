@@ -45,7 +45,6 @@ public class SearchActivity extends AppCompatActivity {
     Button search;
     int search_counter = 0;
     RecyclerView recyclerView;
-    Constants constants;
     List<TrackList> trackList;
     List<ArtistList> artistList;
     boolean isTracks = true;
@@ -68,7 +67,6 @@ public class SearchActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Search");
 
-        constants = new Constants();
         search_keyword = findViewById(R.id.search_keywords);
         keyword = findViewById(R.id.keyword);
         mode = findViewById(R.id.mode);
@@ -84,16 +82,12 @@ public class SearchActivity extends AppCompatActivity {
             public void onClick(View view, int position) {
                 if(isTracks) {
                     Track track = trackList.get(position).getTrack();
-                    //Toast.makeText(getApplicationContext(), track.getTrackId() + " is selected!", Toast.LENGTH_SHORT).show();
-                    //Log.d("searchDebug", track.getTrackId().toString());
                     Intent i = new Intent(getApplicationContext(), TrackViewActivity.class);
                     long trackId = track.getTrackId();
                     i.putExtra("track_id", trackId);
                     startActivity(i);
                 }else{
                     com.yagneshlp.spiderinductions.pojo.pojo_search_artistlist.Artist artist = artistList.get(position).getArtist();
-                   // Toast.makeText(getApplicationContext(), artist.getArtistId() + " is selected!", Toast.LENGTH_SHORT).show();
-                    //Log.d("searchDebug", track.getTrackId().toString());
                     Intent i = new Intent(getApplicationContext(), ArtistViewActivity.class);
                     long artistId = artist.getArtistId();
                     i.putExtra("artist_id", artistId);
@@ -174,7 +168,7 @@ public class SearchActivity extends AppCompatActivity {
                 ApiClient.getClient().create(ApiInterface.class);
 
         if(isTracks) {
-            Call<com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackListSearchResponse> SearchTracks = apiService.getTrackSearchResult(constants.getApiKey(), 1, 15, search_keyword.getText().toString(), "desc", "json");
+            Call<com.yagneshlp.spiderinductions.pojo.pojo_search_tracklist.TrackListSearchResponse> SearchTracks = apiService.getTrackSearchResult(new Constants().getApiKey(), 1, 15, search_keyword.getText().toString(), "desc", "json");
             SearchTracks.enqueue(new Callback<TrackListSearchResponse>() {
                 @Override
                 public void onResponse(Call<TrackListSearchResponse> call, Response<TrackListSearchResponse> response) {
@@ -193,7 +187,7 @@ public class SearchActivity extends AppCompatActivity {
                 }
             });
         }else{
-            Call<ArtistListSearchResponse> SearchArtist = apiService.getArtistSearchResult(constants.getApiKey(), 1, 15, search_keyword.getText().toString(), "json");
+            Call<ArtistListSearchResponse> SearchArtist = apiService.getArtistSearchResult(new Constants().getApiKey(), 1, 15, search_keyword.getText().toString(), "json");
             SearchArtist.enqueue(new Callback<ArtistListSearchResponse>() {
                 @Override
                 public void onResponse(Call<ArtistListSearchResponse> call, Response<ArtistListSearchResponse> response) {

@@ -98,7 +98,7 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
         values.put(KEY_artist_rating, artist.getRating()); // Email
 
         // Inserting Row
-        db.insert(TABLE_tracks, null, values);
+        db.insert(TABLE_artists, null, values);
         db.close(); // Closing database connection
         Log.d(TAG, "New Artist has been Added into the table");
     }
@@ -114,7 +114,7 @@ public class FavouritesDBHelper extends SQLiteOpenHelper {
     public void deleteArtist(FavouriteArtist artist) {
         SQLiteDatabase db = this.getWritableDatabase();
         // Delete All Rows
-        db.delete(TABLE_tracks, KEY_artist_id + "= '"+artist.getArtist_id()+"'", null);
+        db.delete(TABLE_artists, KEY_artist_id + "= '"+artist.getArtist_id()+"'", null);
         db.close();
         Log.d(TAG, "Artist " + artist.getArtist_name() +" has been Deleted");
     }

@@ -24,9 +24,11 @@ public class FavouritesActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText("Favourite Tracks");
+                    loadTracks();
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText("Favourite Artists");
+                    loadArtists();
                     return true;
             }
             return false;
